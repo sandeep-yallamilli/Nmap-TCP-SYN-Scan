@@ -1,0 +1,57 @@
+
+C:\Users\sande>nmap -sS 192.168.1.31
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 09:32 India Standard Time
+Nmap scan report for 192.168.1.31
+Host is up (0.020s latency).
+All 1000 scanned ports on 192.168.1.31 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: E2:F8:B6:86:91:09 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.90 seconds
+
+
+1. Scan Summary
+Scan Command Used: nmap -sS 192.168.1.31
+
+Nmap Version: 7.95
+
+Scan Date: May 26, 2025
+
+Scan Time: 09:32 IST
+
+Scan Type: TCP SYN Scan (-sS)
+
+Target IP Address: 192.168.1.31
+
+Host Status: Up (Latency: 0.020s)
+
+MAC Address: E2:F8:B6:86:91:09 (Vendor: Unknown)
+
+Scan Duration: 0.90 seconds
+
+Total Ports Scanned: 1000
+
+Closed Ports: 1000 (reset)
+
+Open Ports Detected: 0
+
+2. Observations
+All scanned TCP ports are closed on the target system (192.168.1.31).
+
+The system responded to the probe, indicating that it is live, but no services were detected as accessible during the scan.
+
+The TCP reset responses indicate active rejection rather than a silent drop, suggesting a device or firewall is explicitly closing connections.
+
+3. Recommendations
+✅ From a security standpoint:
+
+This host exhibits a secure posture for the scanned TCP ports. No open services were exposed during the SYN scan.
+
+🔍 For further inspection:
+
+Consider scanning with additional flags (e.g., -sU for UDP, -p- for all ports, or -A for aggressive detection) to uncover hidden services or determine the operating system.
+
+Ensure the device is intended to have all ports closed; if services should be running, check firewall or network configuration.
+
+4. Conclusion
+The system at 192.168.1.31 is reachable on the network, but all scanned TCP ports are closed. No actionable vulnerabilities were observed from this scan, which suggests minimal exposure. However, further scanning or physical inspection may be required depending on the intended function of this host.
